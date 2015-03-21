@@ -4,33 +4,33 @@ The Basics
 Anonymous Closures
 ------------------
 
-	(function () {
-	  // ... all vars and functions are in this scope only
-	  // still maintains access to all globals
-	}());
+    (function () {
+      // ... all vars and functions are in this scope only
+      // still maintains access to all globals
+    }());
 
 Global Import
 -------------
 
-	(function ($, YAHOO) {
-	  // now have access to globals jQuery (as $) and YAHOO in this code
-	}(jQuery, YAHOO));
+    (function ($, YAHOO) {
+      // now have access to globals jQuery (as $) and YAHOO in this code
+    }(jQuery, YAHOO));
 
 Module Export
 -------------
 
-	var MODULE = (function () {
-	  var my = {},
-	      privateVariable = 1;
+    var MODULE = (function () {
+      var my = {},
+          privateVariable = 1;
 
-	  function privateMethod() {
-	    // ...
-	  }
+      function privateMethod() {
+        // ...
+      }
 
-	  my.moduleProperty = 1;
-	  my.moduleMethod = function () {
-	    // ...
-	  };
+      my.moduleProperty = 1;
+      my.moduleMethod = function () {
+        // ...
+      };
 
-	  return my;
-	}());
+      return my;
+    }());
